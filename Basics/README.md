@@ -1,32 +1,41 @@
-# Flowcharts & Pseudocode
-### Flowcharts
+# Data Structures and Algorithms (DSA)
 
-* Understanding flowcharts
-* Basic flowchart symbols
-* Representing problem-solving steps visually
-* Understanding the flow of a program
-* Practicing basic problems through flowcharts
-* Dry runs of problems
+Data Structures and Algorithms (DSA) is one of the most important concepts in computer science. 
+It helps us understand how to organize, store, process, and manipulate data efficiently.
 
-### Pseudocode
+## What is DSA?
 
-* Understanding pseudocode
-* Writing step-by-step solutions
-* Converting problems into logical steps
-* Practicing problem-solving before writing actual code
+- **Data Structures** are ways of organizing and storing data so that it can be used efficiently.
+- **Algorithms** are step-by-step procedures used to solve a particular problem.
 
-## 📝 Practice
+Learning DSA helps improve problem-solving skills, logical thinking, and the ability to write efficient and optimized code.
 
-I practiced the problems, flowcharts, pseudocode, and dry runs manually in my notebook while following the lectures.
+## Topics I am Learning
 
-The main goal of this practice was to improve **logical thinking and problem-solving skills** before moving towards actual C++ implementations.
+- Arrays
+- Strings
+- Searching
+- Sorting
+- Linked Lists
+- Stacks
+- Queues
+- Recursion
+- Trees
+- Graphs
+- Hashing
+- Heaps
+- Dynamic Programming
+- Greedy Algorithms
 
-## 🎯 Goal
+## My Approach
 
-Build a strong foundation in problem-solving and learn to think about the logic of a problem before writing code.
+I am learning DSA using **C++** and focusing on understanding the concepts rather than simply memorizing solutions.
 
----
+For each topic, I try to:
+1. Understand the concept.
+2. Implement it from scratch.
+3. Solve problems based on the concept.
+4. Analyze Time and Space Complexity.
+5. Improve my solution whenever possible.
 
-**Status:** ✅ Completed
-
-**Language:** C++
+> **Goal:** Build strong problem-solving skills and become better at writing efficient and optimized code.
