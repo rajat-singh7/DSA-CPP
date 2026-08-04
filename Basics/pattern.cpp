@@ -388,6 +388,7 @@ int main()
 */
     //Eighteenth Pattern------------------
     //Tough Question
+/*
     int n;
     cout<<"Enter Any Number:"<<endl;
     cin>>n;
@@ -395,7 +396,7 @@ int main()
     while(row<=n)
     {
         int column = 1;
-        char start = 'A'+n-row;
+        char start = 'A'+n-row;//Increment in row
         while(column<=row)
         {
             cout<<start<<" ";
@@ -405,7 +406,78 @@ int main()
         cout<<endl;
         row++;
     }
-
-
+*/
+    //Nineteenth pattern------------------
+    //New type
+/*
+    int n;
+    cout<<"Enter number for pattern:"<<endl;
+    cin>>n;
+    int row = 1;
+    while(row<=n)
+    {
+        //for space
+        int space = n - row;
+        while(space){
+            cout<<" ";
+            space--;
+        }
+        //for stars
+        int column = 1;
+        while(column<=row){
+            cout<<"*";
+            column++;
+        }
+        cout<<endl;
+        row++;
+    }
+*/
+    //Twenty Pattern------------------
+    //**** 
+    //*** 
+    //** 
+    //*
+/*
+    int n;
+    cout<<"Enter number for pattern:"<<endl;
+    cin>>n;
+    int row = 1;
+    while(row<=n)
+    {
+        int star  = n-row+1;
+        int column =1;
+        while(column<=star){
+            cout<<"*";
+            column++;
+        }
+        cout<<endl;
+        row++;
+    }
+*/
+    //Twenty-one pattern------------------
+    //**** 
+    // ***
+    //  **
+    //   *
+    int n;
+    cout<<"Enter number for pattern:"<<endl;
+    cin>>n;
+    int row = 1;
+    while(row<=n)
+    {
+        int space = row-1;
+        while(space){
+            cout<<" ";
+            space--;
+        }
+        int column = 1;
+        int star = n-row+1;
+        while(column<=star){
+            cout<<"*";
+            column++;
+        }
+        cout<<endl;
+        row++;
+    }
     return 0;
     }
