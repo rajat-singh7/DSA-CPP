@@ -396,7 +396,7 @@ int main()
     while(row<=n)
     {
         int column = 1;
-        char start = 'A'+n-row;//Increment in row
+        char start = 'A'+n-row;//After this Increment in row
         while(column<=row)
         {
             cout<<start<<" ";
@@ -459,6 +459,7 @@ int main()
     // ***
     //  **
     //   *
+/*
     int n;
     cout<<"Enter number for pattern:"<<endl;
     cin>>n;
@@ -478,6 +479,310 @@ int main()
         }
         cout<<endl;
         row++;
+    }
+*/
+    //Again practice Some questions:
+    //Eighteen pattern------------------
+/*
+    int n;
+    cout<<"Enter number for Pattern"<<endl;
+    cin>>n;
+    int row = 1;
+    while(row<=n){
+        char start = 'A'+n-row;
+        int column = 1;
+        while(column<=row)
+        {
+            cout<<start<<" ";
+            start++;
+            column++;
+        }
+        cout<<endl;
+        row++;
+    }
+*/
+    //Now Practice seventeen no Pattern in simple way(Without using formula):
+    //Like that pattern number 18-------------------(H.W)
+/*
+    int n;
+    cout<<"Enter number for pattern:"<<endl;
+    cin>>n;
+    int row = 1;
+    while(row<=n)
+    {
+        int column = 1;
+        char start = 'A'+row-1; //After this increment in row 
+        while(column<=n){
+            cout<<start<<" ";
+            start++;
+            column++;
+        }
+        cout<<endl;
+        row++;
+    }
+*/
+    //Nineteen Pattern------------------
+    //   *
+    //  **
+    // ***
+    //****
+/*
+    int n;
+    cout<<"Enter number for pattern:"<<endl;
+    cin>>n;
+    int row = 1;
+    while(row<=n){
+        int space = n-row;
+        while(space)
+        {
+            cout<<" ";
+            space--;
+        }
+        int column = 1;
+        while(column<=row){
+            cout<<"*";
+            column++;
+        }
+        cout<<endl;
+        row++;
+    }
+*/
+
+    //Twenty Pattern------------------
+    //(H.W)
+    //**** 
+    //*** 
+    //** 
+    //*
+/*
+    int n;
+    cout<<"Enter number for pattern:"<<endl;
+    cin>>n;
+    int row = 1;
+    while(row<=n)
+    {
+        int star = n-row+1;
+        int column = 1;
+        while(column<=star)
+        {
+            cout<<"*";
+            column++;
+        }
+        cout<<endl;
+        row++;
+    }
+*/
+    //Twenty one Pattern------------------
+    //(H.W)
+    //**** 
+    // ***
+    //  **
+    //   *
+/*
+    int n;
+    cout<<"Enter number for pattern"<<endl;
+    cin>>n;
+    int row = 1;
+    while(row<=n){
+        int space = row-1;
+        while(space){
+            cout<<" ";
+            space--;
+        }
+        int column = 1;
+        int star = n-row+1;
+        while(column<=star){
+            cout<<"*";
+            column++;
+        }
+        cout<<endl;
+        row++;
+    }
+*/
+    //Now Starting with fresh and new pattern...
+    //Twenty two Pattern------------------
+    //(H.W)
+    //   1
+    //  22
+    // 333
+    //4444
+/*
+    int n;
+    cout<<"Enter number for pattern:"<<endl;
+    cin>>n;
+    int row = 1;
+    while(row<=n){
+        int space = n-row;
+        while(space){
+            cout<<" ";
+            space--;
+        }
+        int column = 1;
+        while(column<=row){
+            cout<<row;
+            column++;
+        }
+        cout<<endl;
+        row++;
+    }
+*/
+    //Twenty three Pattern------------------
+    //(H.W)
+    //1 2 3 4
+    // 2 3 4
+    //   3 4
+    //     4
+/*
+    int n;
+    cout<<"Enter number for pattern:"<<endl;
+    cin>>n;
+    int row = 1;
+    while(row<=n){
+        int space = row-1;
+        while(space){
+            cout<<" ";
+            space--;
+        }
+        int column = row;
+        while(column<=n){
+            cout<<column;
+            column++;
+        }
+        cout<<endl;
+        row++;
+    }
+*/
+    //Twenty four Pattern------------------
+    //(H.W)
+    //1 1 1 1
+    //  2 2 2
+    //    3 3
+    //      4
+/*
+    int n;
+    cout<<"Enter number for pattern:"<<endl;
+    cin>>n;
+    int row = 1;
+    while(row<=n){
+        int space = row-1;
+        while(space){
+            cout<<" ";
+            space--;
+        }
+        int column = row;
+        while(column<=n){
+            cout<<row;
+            column++;   
+        }
+        cout<<endl;
+        row++;
+        
+    }
+*/
+  
+    //Twenty five Pattern:
+    //(H.W)
+    //      1
+    //   2  3
+    // 4 5  6
+    // 7 8 9 10
+/*
+    int n;
+    cout<<"Enter number for pattern:"<<endl;
+    cin>>n;
+    int row = 1;
+    int count = 1;
+    while(row<=n){
+        int space = n-row;
+        while(space){
+            cout<<" ";
+            space--;
+        }
+        int column = 1;
+     
+        while(column<=row){
+            cout<<count<<" ";
+            count++;
+            column++;
+        
+        }
+        cout<<endl;
+        row++;
+        
+    }
+*/
+    //Twenty six pattern
+    //Tough question:
+    //Half done by me:
+    //   1   
+    //  1 2 1
+    // 1 2 3 2 1 
+    //1 2 3 4 3 2 1
+/*
+    int n;
+    cout<<"Enter number for Pattern:"<<endl;
+    cin>>n;
+    int row  = 1;
+    while(row<=n)
+    {
+        //Print first Space Triangle:
+        int space = n - row;
+        while(space){
+            cout<<" ";
+            space--;
+        }
+
+        //Print second Triangle:
+        int column = 1;
+        while(column<=row){
+            cout<<column;
+            column++;
+        }
+        
+        //Print Third Triangle:
+        int start = row-1;
+        while(start){
+            cout<<start;
+            start--;
+        }
+        cout<<endl;
+        row++;
+    }
+*/
+
+    //Twenty seven pattern
+    //Tough Pattern
+    //(H.W)
+    //1 2 3 4 5 5 4 3 2 1 
+    //1 2 3 4 **4 3 2 1 
+    //1 2 3 ****3 2 1 
+    //1 2 ******2 1 
+    //1 ********1 
+    int n;
+    cout<<"Enter number for pattern:"<<endl;
+    cin>>n;
+    int row = n;
+    while(row>=1){
+        //Left side numbers
+        int column = 1;
+        while(column<=row){
+            cout<<column<<" ";
+            column++;
+        }
+        //Middle Star:
+        int star = 2*(n-row);
+        while(star){
+           cout<<"*";
+           star--;
+        }
+        // //right side triangle
+        int num  = row;
+        while(num>=1){
+           cout<<num<<" ";
+           num--;
+        }
+        cout<<endl;
+        row--;
     }
     return 0;
     }
