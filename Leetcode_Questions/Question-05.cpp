@@ -1,4 +1,4 @@
-//Leetcode Problem Number 1009:
+//Leetcode Problem Number 476:
 //Problem No-476 as similar as 1009 but in 476 not take n==0 edge case
 #include <iostream>
 using namespace std;
