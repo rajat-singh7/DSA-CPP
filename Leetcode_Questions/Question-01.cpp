@@ -1,5 +1,7 @@
 //problem Number 1281
 //Subtract the product and sum of digits of an integer:
+
+
 #include<iostream>
 using namespace std;
 int main() {
