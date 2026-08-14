@@ -33,3 +33,10 @@ public:
         
     }
 };
+
+int main(){
+    Solution s;
+    vector<int> arr = {1,2,1,2,1,3};
+    cout<<s.uniqueOccurrences(arr);
+    //Output is One(True)
+}
