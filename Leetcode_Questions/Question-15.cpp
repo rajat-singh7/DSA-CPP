@@ -1,0 +1,28 @@
+//Leetcode Problem 01:
+//Two Sum:
+//Today solving this problem by brute force approach:
+//Hashmap is another approach for this problem:
+#include<iostream>
+#include<vector>
+using namespace std;
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        int n = nums.size();
+        for(int i = 0;i<n;i++){
+            for(int j = i+1;j<n;j++){
+                if(nums[i]+nums[j]==target){
+                    return{i,j};
+                    
+                }
+            }
+        }
+        return {};
+    }
+};
+int main() {
+    Solution s;
+    vector<int> nums = {2,7,4,8};
+ return 0;
+}
