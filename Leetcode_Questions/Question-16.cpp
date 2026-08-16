@@ -1,6 +1,7 @@
 //leetcode problem - 167
 //Two Sum-2
 //Two pointer approach
+//Two Pointer approach is Best approach for this Problem:
 #include<iostream>
 #include<vector>
 using namespace std;
