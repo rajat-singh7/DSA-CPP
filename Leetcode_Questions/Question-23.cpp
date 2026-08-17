@@ -1,6 +1,7 @@
 // Leetcode Problem 724:
 // Find pivot Index:
-//Binary search Approach:
+//Prefix Sum Approach:
+//This is the best approach to solve this problem:
 #include <iostream>
 #include <vector>
 using namespace std;
