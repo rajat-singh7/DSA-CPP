@@ -1,65 +1,81 @@
-//Leetcode Problem 34:
-//First and last occurence of an elements in an array:
-//Binary Search approach
-//Time Complexity = O(logn)
-#include<iostream>
-#include<vector>
+// Leetcode Problem 34:
+// First and last occurence of an elements in an array:
+// Binary Search approach
+// Time Complexity = O(logn)
+#include <iostream>
+#include <vector>
 using namespace std;
-int Find_Left_Most_occurence(vector<int>& nums, int target , int n){
+int Find_Left_Most_occurence(vector<int> &nums, int target, int n)
+{
     int start = 0;
-    int end = n-1;
+    int end = n - 1;
     int Left_most = -1;
-    while(start<=end){
-        int mid = start + (end-start)/2;
-        if(nums[mid]==target){
+    while (start <= end)
+    {
+        int mid = start + (end - start) / 2;
+        if (nums[mid] == target)
+        {
             Left_most = mid;
-            end = mid-1;
+            end = mid - 1;
         }
-        else if(nums[mid]>target){
-            end = mid-1;
+        else if (nums[mid] > target)
+        {
+            end = mid - 1;
         }
         else
         {
-            start = mid+1;
+            start = mid + 1;
         }
-        mid = start + (end-start)/2;
+        mid = start + (end - start) / 2;
     }
     return Left_most;
-
 }
 
-int Find_Right_Most_occurence(vector<int>& nums, int target , int n){
+int Find_Right_Most_occurence(vector<int> &nums, int target, int n)
+{
     int start = 0;
-    int end = n-1;
+    int end = n - 1;
     int Right_most = -1;
-    while(start<=end){
-        int mid = start + (end-start)/2;
-        if(nums[mid]==target){
+    while (start <= end)
+    {
+        int mid = start + (end - start) / 2;
+        if (nums[mid] == target)
+        {
             Right_most = mid;
             start = mid + 1;
         }
-        else if(nums[mid]>target){
-            end = mid-1;
+        else if (nums[mid] > target)
+        {
+            end = mid - 1;
         }
         else
         {
-            start = mid+1;
+            start = mid + 1;
         }
-        mid = start + (end-start)/2;
+        mid = start + (end - start) / 2;
     }
     return Right_most;
-
 }
-class Solution {
+class Solution
+{
 public:
-    vector<int> searchRange(vector<int>& nums, int target) {
+    vector<int> searchRange(vector<int> &nums, int target)
+    {
         int n = nums.size();
-        int Left_most = Find_Left_Most_occurence(nums,target,n);
-        int Right_most = Find_Right_Most_occurence(nums,target,n);
-        return vector<int>{Left_most,Right_most};
-        
+        int Left_most = Find_Left_Most_occurence(nums, target, n);
+        int Right_most = Find_Right_Most_occurence(nums, target, n);
+        return vector<int>{Left_most, Right_most};
     }
 };
-int main(){
+int main()
+{
+    Solution sol;
+    vector<int> nums = {5, 7, 7, 8, 8, 10};
+    int target = 8;
+    vector<int> ans = sol.searchRange(nums, target);
+
+    cout << "First Occurence: " << ans[0] << endl;
+    cout << "Last Occurence: " << ans[1] << endl;
+
     return 0;
 }
