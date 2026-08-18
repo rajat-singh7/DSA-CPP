@@ -1,5 +1,5 @@
 // Leetcode Problem 1991:
-// Find middle index in array:
+// Find middle index in array(pivot also):
 //Prefix Sum Approach:
 //This is the best approach to solve this problem:
 //As similar as last one 724:
