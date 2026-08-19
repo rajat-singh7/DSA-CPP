@@ -1,6 +1,7 @@
 //Leetcode Problem 88:
 //Merged two sorted array:
 //Three pointer approach:
+//Time complexity O(m+n):
 #include<iostream>
 #include<vector>
 using namespace std;
