@@ -21,7 +21,8 @@ int main() {
 
 
     
-    //This is Good Approach:
+    //This is Best Approach for interview purpose:
+    //Brian kernighan's algoritham Use:
     //Bit manipulation:
     class Solution {
 public:
