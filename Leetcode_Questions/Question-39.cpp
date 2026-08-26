@@ -1,34 +1,64 @@
+// Leetcode Problem 1482:
+// Minimum Number of Days to Make m Bouquets:
+// Binary search on Answers Approach:
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
 
-   
-class Solution {
-public:
-    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
-        int m = nums1.size();
-        int n = nums2.size();
-        vector<int> merged(m+n);
-        int i = 0,j =0,k =0;
-        while(i<m && j<n){
-            if(nums1[i]<nums2[j]){
-                merged[k++] = nums1[i++];
-            }
-            else
-            {
-                merged[k++] = nums2[j++];
-            }
-        }
-        while(i<m){
-            merged[k++] = nums1[i++];
-        }
-        while(j<n){
-            merged[k++] = nums2[j++];
-        }
-        int size = m+n;
-        if(size%2==1){
-            return merged[size/2];
+int CanMakeBouqe(vector<int> &bloomDay, int mid, int k)
+{
+    int bouqe_count = 0;
+    int consecutive_count = 0;
+    for (int i = 0; i < bloomDay.size(); i++)
+    {
+        if (bloomDay[i] <= mid)
+        {
+            consecutive_count++;
         }
         else
         {
-            return (merged[(size/2)-1] + merged[size/2])/2.0;
+            consecutive_count = 0;
+        }
+        if (consecutive_count == k)
+        {
+            bouqe_count++;
+            consecutive_count = 0;
         }
     }
+    return bouqe_count;
+}
+class Solution
+{
+public:
+    int minDays(vector<int> &bloomDay, int m, int k)
+    {
+        int start = 1;
+        int end = *max_element(bloomDay.begin(), bloomDay.end());
+        int ans = -1;
+        while (start <= end)
+        {
+            int mid = start + (end - start) / 2;
+            if (CanMakeBouqe(bloomDay, mid, k) >= m)
+            {
+                ans = mid;
+                end = mid - 1;
+            }
+            else
+            {
+                start = mid + 1;
+            }
+        }
+        return ans;
+    }
 };
+int main()
+{
+    vector<int> bloomDay = {1, 10, 3, 10, 2};
+    int m = 3;
+    int k = 1;
+    Solution sol;
+    int result = sol.minDays(bloomDay, m, k);
+    cout << "Minimum days to make " << m << " Bouquets: " << result << endl;
+    return 0;
+}
