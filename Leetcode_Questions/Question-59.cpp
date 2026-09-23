@@ -32,6 +32,7 @@ public:
 
 //Best Approach:
 //By Using Sieve of Eratosthenes Algorithm:
+//TC = O(nloglogn):
 class Solution {
 public:
     int countPrimes(int n) {
