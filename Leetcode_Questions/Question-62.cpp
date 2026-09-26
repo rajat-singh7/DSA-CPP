@@ -1,6 +1,7 @@
 //Leetcode Problem 1979:
 //Find greatest common divisor of array:
 //time Complexity --->O(n+logmin)=>O(n):
+//Euclid Algorithm:
 #include<iostream>
 #include<algorithm>
 #include<vector>
