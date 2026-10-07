@@ -46,6 +46,16 @@ int main()
     cout<<pp<<" - "<<pointer<<endl;
     cout<<*pp<<" - "<<*pointer<<endl;
 
+    //Important concept:
+    int s = 15;
+    int *point = &s;
+    *point = *point+1;
+    cout<<*point<<endl;
+    cout<<"point before "<<point<<endl;
+    point = point+1;
+    cout<<"point after "<<point<<endl; //go to the next address
+
+
     
 
     return 0;
