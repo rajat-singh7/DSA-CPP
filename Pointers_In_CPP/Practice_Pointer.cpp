@@ -1,6 +1,10 @@
 #include <iostream>
 using namespace std;
 
+void update(int *p){
+    *p = (*p)*2;
+}
+
 int main() {
     //PREDICT THE OUTPUT:
 /*
@@ -103,11 +107,55 @@ int main() {
     int arr[6] = {23,26,29};
     int *p = arr;
     cout<<p[2]<<endl;   // Output is 29 p[2] == *(p+2)
-*/
+
     //Predict the output:
     int arr[] = {2,5,6,1,8,9};
     cout<<*arr<<" "<<*(arr+3)<<endl; // 2 1
-    
+
+    //Predict The Output:
+    char ch = 'A';
+    char *ptr = &ch;
+    ch++;
+    cout<<*ptr<<endl;  //The *ptr is Pointing the Box in which A is stored so the output is B
+
+    //Predict The Output:
+    char ch[] = "abcde";
+    char *ptr = &ch[0];
+    cout<<ptr<<endl; //Cout in char array is working the differntly so the whole array is print:
+
+    //Predict the output:
+    char arr[] = "ABCDE";
+    char *p = &arr[0];
+    p++;
+    cout<<p<<endl; //BCDE
+
+    //Predict the output:
+    char str[] = "rajat";
+    char *p = str;
+    cout<<str[0]<<" "<<p[0]<<endl;  // r r
+
+    //Predict the output:
+    //for this we make a function upper of the code:
+    int i = 10;
+    update(&i);
+    cout<<i<<endl; //20
+    //good question:
+    int first = 110;
+    int *p = &first;
+    int **q = &p;
+    int second = (**q)++ + 9;
+    cout<<first<<" "<<second<<endl; //111 119
+*/
+    //Another one:
+    int first = 110;
+    int *p = &first;
+    int **q = &p;
+    int second = ++(**q);
+    int *r = *q;
+    ++(*r);
+    cout<<first<<" "<<second<<endl;
+
+
 
     
     return 0;
