@@ -86,10 +86,29 @@ int main() {
     int arr[5];
     int *ptr;
     cout<<sizeof(arr)<<" "<<sizeof(ptr)<<endl; // 20 8
-*/ 
+
     //Predict the output:
     int arr[5] = {23,45,16,67,2};
     cout<<*(arr)<<" "<<*(arr+1)<<endl; //23 45
+  
+    //PREDICT THE OUTPUT:
+    int arr[6] = {11,12,13};
+    cout<<arr<<" "<<&arr<<endl; //Address of first element
+
+    //Predict the output:
+    int arr[6] = {11,12,13};
+    cout<<(arr+1)<<endl; //adress of second
+ 
+    //predict the Output:
+    int arr[6] = {23,26,29};
+    int *p = arr;
+    cout<<p[2]<<endl;   // Output is 29 p[2] == *(p+2)
+*/
+    //Predict the output:
+    int arr[] = {2,5,6,1,8,9};
+    cout<<*arr<<" "<<*(arr+3)<<endl; // 2 1
+    
+
     
     return 0;
 }
