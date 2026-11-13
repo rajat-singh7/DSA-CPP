@@ -16,7 +16,6 @@ int main() {
     string str = "rajat";
     cout<<endl;
     Reverse(str,0,str.length()-1);
-    cout<<endl;
     cout<<str<<endl;
  return 0;
 }
